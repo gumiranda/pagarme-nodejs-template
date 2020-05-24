@@ -24,6 +24,9 @@ class userRepository{
     let userR = await this._base._model.findOne({_id:userCriado._id},this._projection);
     return userR;
   }
+  async updatePayment(data,userid){
+    return await this._base.update(userid,{payDay:data});
+  }
   async update(id,data,usuarioLogado){
     if(usuarioLogado._id === id){
       if(data.oldPassword !== data.senha && data.oldPassword && data.senha !== undefined && data.senhaConfirmacao !== undefined && data.senha === data.senhaConfirmacao){

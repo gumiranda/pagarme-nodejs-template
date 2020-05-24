@@ -33,6 +33,14 @@ exports.get = async (repository, req, res) => {
     res.status(500).send({ message: "Erro no processamento", error: erro });
   }
 };
+exports.getMyAll = async (repository, req, res) => {
+  try {
+    let resultado = await repository.getMyAll(req.usuarioLogado.user);
+    res.status(200).send(resultado);
+  } catch (erro) {
+    res.status(500).send({ message: "Erro no processamento", error: erro });
+  }
+};
 exports.delete = async (repository,req,res) =>{
 try{
   const id = req.params.id;
