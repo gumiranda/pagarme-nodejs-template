@@ -99,7 +99,7 @@ transactionController.prototype.post = async (req,res) => {
         {id:"1",title:"Parcela mensal do aplicativo do dev doido",
       unit_price:30, quantity:1, tangible:true }
       ], metadata: { idProduto : '1'}
-      });
+      }); 
       const cardAux = pagarmeTransaction.card;
       const card = {state:data.state,city:data.city,neighborhood:data.neighborhood,street:data.street,
       street_number:data.street_number,name:cardAux.holder_name,cpf:data.cpf,phone:data.phone,email:data.email,street_number:data.street_number,zipcode:data.zipcode,
