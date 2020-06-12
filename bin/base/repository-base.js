@@ -1,31 +1,35 @@
-'use strict'
-
 const mongoose = require('mongoose');
 
 class baseRepository {
-  constructor(model){
+  constructor(model) {
     this._model = mongoose.model(model);
   }
-  async create(data){
-    let modelo = new this._model(data);
-    let resultado = await modelo.save();
+
+  async create(data) {
+    const modelo = new this._model(data);
+    const resultado = await modelo.save();
     return resultado;
   }
-  async update(id,data,usuarioLogado){
-    await this._model.findByIdAndUpdate(id,{$set:data});
-    let resultado = await this._model.findById(id);
+
+  async update(id, data, usuarioLogado) {
+    await this._model.findByIdAndUpdate(id, { $set: data });
+    const resultado = await this._model.findById(id);
     return resultado;
   }
-  async getAll(){
+
+  async getAll() {
     return await this._model.find({});
   }
-  async getMyAll(user){
-    return await this._model.find({userId:user._id});
+
+  async getMyAll(user) {
+    return await this._model.find({ userId: user._id });
   }
-  async delete(id){
+
+  async delete(id) {
     return await this._model.findByIdAndDelete(id);
   }
-  async getById(id){
+
+  async getById(id) {
     return await this._model.findById(id);
   }
 }
