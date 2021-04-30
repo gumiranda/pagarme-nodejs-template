@@ -1,5 +1,5 @@
-# Estruturação Inicial Backend Node Express MongoDB
-Estruturação inicial do backend do canal do dev Doido Aula 1 - com Fausto Silva https://www.youtube.com/watch?v=UFl0ZYZ-1Ho
+# Integração Pagar.me em Backend com NodeJs Express MongoDB
+Estruturação inicial e criaçao de transações na pagarme do backend do canal do dev Doido Aula 1 - com Fausto Silva https://www.youtube.com/watch?v=UFl0ZYZ-1Ho
 
 # Aprenda a construir uma API REST do zero usando NODEJS EXPRESS MONGODB com FAUSTÃO.
 Configure middlewares como a de autenticação usando token JWT JSON.
