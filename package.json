@@ -11,7 +11,7 @@
     "express": "^4.17.1",
     "http": "^0.0.1-security",
     "jsonwebtoken": "^8.5.1",
-    "moment": "^2.25.3",
+    "moment": "^2.29.2",
     "mongoose": "^5.9.14",
     "pagarme": "^4.8.0",
     "react-native-crypto-js": "^1.0.0"
